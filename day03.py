@@ -48,20 +48,47 @@
 # print("{0[python]} {0[datastructure]}".format(subjects))
 
 # prime number
-number = int(input("Input number : "))
-is_prime = True # int -> bool
+# number = int(input("Input number : "))
+# is_prime = True # int -> bool
+#
+# if number<2:
+#     print(f'{number} is NOT prime number!')
+# else :
+#     i = 2
+#     while i < number:
+#         if number % i == 0:
+#             is_prime = False # remove +
+#             break
+#         i += 1
+#     #if cnt == 0 :
+#     if is_prime: # remove ==
+#         print(f'{number} is prime number')
+#     else :
+#         print(f'{number} is NOT prime number')
 
-if number<2:
-    print(f'{number} is NOT prime number!')
-else :
-    i = 2
-    while i < number:
-        if number % i == 0:
-            is_prime = False # remove +
-            break
-        i += 1
-    #if cnt == 0 :
-    if is_prime: # remove ==
-        print(f'{number} is prime number')
+# print('range(0,3)')
+
+# 50과 100사이 소수가 출력되는 프로그램
+number_list = input('first second number : ').split()
+n1 = int(number_list[0])
+n2 = int(number_list[1])
+
+if n1 > n2 :
+    n1, n2 = n2, n1
+
+for number in range(n1,n2+1) :
+    is_prime = True
+
+    if number < 2:
+        pass
     else :
-        print(f'{number} is NOT prime number')
+        for i in range(2, number):
+            if number % i == 0:
+                is_prime = False
+                break
+        if is_prime : print(number, end=' ')
+
+# 6.5 연습문제 1,2,3번 (144쪽)
+# 오늘 만든 반복문, if -> 소수 판정 프로그램(3번메뉴), 구간 소수(4번메뉴), 섭시화씨(1,2번메뉴), 종료 5번
+
+
