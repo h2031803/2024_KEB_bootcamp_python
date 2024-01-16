@@ -32,9 +32,32 @@
 # print(course.index('KEB')) # .index = .find, rindex 도 동일기능
 # print(course.find('KEC')) # -1 return (can't find) /// index는 오류 발생
 
-subjects = "python c++ database linux"
-subject = input("수강신청과목 입력 : ")
-try:
-    print(f"해당 과목이 존재합니다. 위치는 {subjects.index(subject)}번 인덱스입니다.")
-except ValueError:
-    print('해당 과목 존재 x')
+# subjects = "python c++ database linux"
+# print(subjects.isalnum())
+# subject = input("수강신청과목 입력 : ")
+# try:
+#     print(f"해당 과목이 존재합니다. 위치는 {subjects.index(subject)}번 인덱스입니다.")
+# except ValueError:
+#     print('해당 과목 존재 x')
+
+# print('%e' %0.703)
+# print('%d%%'%100)
+# print("Our %s Chester weighs %d pounds"%('cat',28))
+
+# subjects = {'python': 'Kim', 'c++': 'sung', 'datastructure': 'Kim', 'database': 'kang'}
+# print("{0[python]} {0[datastructure]}".format(subjects))
+
+# prime number
+number = int(input("Input number : "))
+cnt = 0
+i = 2
+
+while i < number:
+    if number % i == 0:
+        cnt = cnt + 1
+        break
+    i += 1
+if cnt == 0:
+    print(f'{number} is prime number')
+else :
+    print(f'{number} is NOT prime number')
