@@ -68,27 +68,84 @@
 
 # print('range(0,3)')
 
-# 50과 100사이 소수가 출력되는 프로그램
-number_list = input('first second number : ').split()
-n1 = int(number_list[0])
-n2 = int(number_list[1])
-
-if n1 > n2 :
-    n1, n2 = n2, n1
-
-for number in range(n1,n2+1) :
-    is_prime = True
-
-    if number < 2:
-        pass
-    else :
-        for i in range(2, number):
-            if number % i == 0:
-                is_prime = False
-                break
-        if is_prime : print(number, end=' ')
-
-# 6.5 연습문제 1,2,3번 (144쪽)
 # 오늘 만든 반복문, if -> 소수 판정 프로그램(3번메뉴), 구간 소수(4번메뉴), 섭시화씨(1,2번메뉴), 종료 5번
+# while True :
+#     menu = input("1) Fahrenheit -> Celsius   2) Celsius -> Fahrenheit   3) prime number discrimination\
+#   4) find prime numbers within the interval(firstnum secondnum) 5) Exit : ")
+#     if menu == '1':
+#         fahrenheit = float(input('Input Fahrenheit : '))
+#         print(f'Fahrenheit : {fahrenheit}F, Celsius : {((fahrenheit-32.0)*5.0/9.0):.4f}C')
+#     elif menu == '2':
+#         celsius = float(input('Input Celsius : '))
+#         print(f'Celsius : {celsius}C, Fahrenheit : {((celsius*9.0/5.0)+32.0):.4f}F')
+#     elif menu == '3':
+#         number = int(input("Input number : "))
+#         is_prime = True
+#         if number<2:
+#             print(f'{number} is NOT prime number!')
+#         else :
+#             i = 2
+#             while i < number:
+#                 if number % i == 0:
+#                     is_prime = False # remove +
+#                     break
+#                 i += 1
+#             #if cnt == 0 :
+#             if is_prime: # remove ==
+#                 print(f'{number} is prime number')
+#             else :
+#                 print(f'{number} is NOT prime number')
+#     elif menu == '4':
+#         number_list = input('first second number : ').split()
+#         n1 = int(number_list[0])
+#         n2 = int(number_list[1])
+#
+#         if n1 > n2:
+#             n1, n2 = n2, n1
+#
+#         for number in range(n1, n2 + 1):
+#             is_prime = True
+#
+#             if number < 2:
+#                 pass
+#             else:
+#                 for i in range(2, number):
+#                     if number % i == 0:
+#                         is_prime = False
+#                         break
+#                 if is_prime:
+#                     print(number, end=' ')
+#         print('\n')
+#     elif menu == '5':
+#         print('Terminate Program.')
+#         break
+# 6.5 연습문제 1,2,3번 (144쪽)
+# list = []
+# for i in range(0,4):
+#     list.append(i)
+# list.reverse()
+# print(list)
 
+# guess_me = 7
+# number = 1
+# while True :
+#     if number < guess_me :
+#         print('too low')
+#     elif number == guess_me :
+#         print('found it!')
+#         break
+#     elif number > guess_me :
+#         print('oops')
+#         break
+#     number += 1
 
+guess_me = 5
+for number in range(10) :
+    if number < guess_me :
+        print('too low')
+    elif number == guess_me :
+        print('found it!')
+        break
+    elif number > guess_me :
+        print('oops')
+        break
